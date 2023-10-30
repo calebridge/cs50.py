@@ -1,0 +1,13 @@
+#coke is $.50
+amount_due = 50
+#only loop when there is money due
+while amount_due > 0:
+    print("Amount Due:", amount_due)
+    coin = int(input("Insert Coin: "))
+    #listing all coins accepted
+    if coin in [1, 5, 10, 25, 50]:
+    #changes amount_due -= coin to amount_due = amount_due - coin
+        amount_due -= coin
+#caleculator change owed
+change_owed = abs(amount_due)
+print("Change Owed:", change_owed)
