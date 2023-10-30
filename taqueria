@@ -1,0 +1,22 @@
+menu = {
+    "baja taco": 4.25,
+    "burrito": 7.50,
+    "bowl": 8.50,
+    "nachos": 11.00,
+    "quesadilla": 8.50,
+    "super burrito": 8.50,
+    "super quesadilla": 9.50,
+    "taco": 3.00,
+    "tortilla salad": 8.00
+}
+total_amount = 0
+for key in menu:
+    try:
+        item = input("Item: ").title()
+        new_item = item.lower()
+        if new_item in menu:
+            total_amount += menu[new_item]
+            print("Total: $" + "{:.2f}".format(total_amount))
+    except EOFError:
+        print()
+        break
